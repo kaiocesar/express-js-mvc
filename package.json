@@ -1,0 +1,26 @@
+{
+  "name": "base",
+  "version": "0.0.1",
+  "description": "Projeto de base para estrutura avançada em node.js express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/nodemon server.js"
+  },
+  "author": "Kaio Cesar",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.8.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.8.8",
+    "express-ejs-layouts": "^1.1.0",
+    "express-session": "^1.8.1",
+    "mongoose": "^3.8.16",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.4.9",
+    "swig": "^1.4.2"
+  }
+}

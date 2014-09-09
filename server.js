@@ -10,6 +10,7 @@ var express = require('express')
   , flash = require('connect-flash')
   , bodyParser = require('body-parser')
   , cookieParser = require('cookie-parser')
+  , methodoverride = require("method-override")
   , app = express();
 
 
@@ -24,9 +25,12 @@ require('./configs/passport')(passport);
 // settings 
 app.set('port', process.env.PORT || 1337);
 app.use(cookieParser());
+app.use(bodyParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname + "/public")));
+app.set('uploadDir', './uploads');
+
 
 // View engine
 app.engine('html',swig.renderFile);
